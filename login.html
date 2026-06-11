@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Login to Ebenezer — Access your account and continue your journey with us."
+    />
+    <title>Login | Ebenezer</title>
+
+    <!-- Google Fonts — matching site typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- Auth Stylesheet -->
+    <link rel="stylesheet" href="css/auth.css" />
+  </head>
+
+  <body class="auth-body">
+
+    <!-- ========== BACKGROUND OVERLAY ========== -->
+    <div class="auth-bg" aria-hidden="true">
+      <div class="auth-bg__overlay"></div>
+      <div class="auth-bg__circles">
+        <span class="circle circle--1"></span>
+        <span class="circle circle--2"></span>
+        <span class="circle circle--3"></span>
+        <span class="circle circle--4"></span>
+      </div>
+    </div>
+
+    <!-- ========== NAVIGATION BAR ========== -->
+    <nav class="auth-nav" role="navigation" aria-label="Site navigation">
+      <div class="auth-nav__container">
+        <!-- Logo -->
+        <a href="index.html" class="auth-nav__logo" aria-label="Ebenezer Home">
+          <span class="logo__icon" aria-hidden="true">
+            <i class="fas fa-cross"></i>
+          </span>
+          <span class="logo__text">Ebenezer</span>
+        </a>
+
+        <!-- Nav links -->
+        <div class="auth-nav__links">
+          <a href="index.html" class="auth-nav__link">
+            <i class="fas fa-home" aria-hidden="true"></i>
+            Home
+          </a>
+          <a href="signup.html" class="auth-nav__link auth-nav__link--cta">
+            Sign Up
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main class="auth-main" id="main-content">
+      <div class="auth-wrapper">
+
+        <!-- ---- Left Panel: Branding ---- -->
+        <aside class="auth-panel auth-panel--brand" aria-label="Brand information">
+          <div class="brand-content">
+
+            <!-- Quote / Welcome -->
+            <div class="brand-badge">
+              <i class="fas fa-quote-left" aria-hidden="true"></i>
+            </div>
+
+            <h1 class="brand-title">
+              Welcome Back to Ebenezer
+            </h1>
+
+            <p class="brand-subtitle">
+              "Thus far the Lord has helped us." — 1 Samuel 7:12
+            </p>
+
+            <p class="brand-desc">
+              Sign in to access your account, connect with the community,
+              and continue your spiritual journey with us.
+            </p>
+
+            <!-- Features list -->
+            <ul class="brand-features" aria-label="Account benefits">
+              <li class="brand-feature">
+                <span class="feature-icon" aria-hidden="true">
+                  <i class="fas fa-church"></i>
+                </span>
+                <span>Access service schedules & events</span>
+              </li>
+              <li class="brand-feature">
+                <span class="feature-icon" aria-hidden="true">
+                  <i class="fas fa-users"></i>
+                </span>
+                <span>Connect with the congregation</span>
+              </li>
+              <li class="brand-feature">
+                <span class="feature-icon" aria-hidden="true">
+                  <i class="fas fa-bible"></i>
+                </span>
+                <span>Access sermons and devotionals</span>
+              </li>
+              <li class="brand-feature">
+                <span class="feature-icon" aria-hidden="true">
+                  <i class="fas fa-heart"></i>
+                </span>
+                <span>Submit & track prayer requests</span>
+              </li>
+            </ul>
+
+            <!-- Decorative crosses -->
+            <div class="brand-decor" aria-hidden="true">
+              <i class="fas fa-cross decor-cross decor-cross--1"></i>
+              <i class="fas fa-cross decor-cross decor-cross--2"></i>
+              <i class="fas fa-cross decor-cross decor-cross--3"></i>
+            </div>
+          </div>
+        </aside>
+
+        <!-- ---- Right Panel: Login Form ---- -->
+        <section
+          class="auth-panel auth-panel--form"
+          aria-labelledby="login-heading"
+        >
+          <div class="form-container">
+
+            <!-- Form Header -->
+            <div class="form-header">
+              <div class="form-header__icon" aria-hidden="true">
+                <i class="fas fa-user-circle"></i>
+              </div>
+              <h2 class="form-header__title" id="login-heading">
+                Sign In
+              </h2>
+              <p class="form-header__sub">
+                Don't have an account?
+                <a href="signup.html" class="form-header__link">
+                  Create one here
+                </a>
+              </p>
+            </div>
+
+            <!-- Social Login -->
+            <div class="social-auth" aria-label="Sign in with social accounts">
+              <button
+                type="button"
+                class="social-btn social-btn--google"
+                aria-label="Sign in with Google"
+              >
+                <svg
+                  class="social-btn__icon"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                    fill="#4285F4"
+                  />
+                  <path
+                    d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                    fill="#34A853"
+                  />
+                  <path
+                    d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                    fill="#FBBC05"
+                  />
+                  <path
+                    d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                    fill="#EA4335"
+                  />
+                </svg>
+                Continue with Google
+              </button>
+
+              <button
+                type="button"
+                class="social-btn social-btn--facebook"
+                aria-label="Sign in with Facebook"
+              >
+                <i class="fab fa-facebook-f social-btn__icon" aria-hidden="true"></i>
+                Continue with Facebook
+              </button>
+            </div>
+
+            <!-- Divider -->
+            <div class="auth-divider" role="separator" aria-label="or">
+              <span class="auth-divider__line" aria-hidden="true"></span>
+              <span class="auth-divider__text">or sign in with email</span>
+              <span class="auth-divider__line" aria-hidden="true"></span>
+            </div>
+
+            <!-- LOGIN FORM -->
+            <form
+              class="auth-form"
+              id="loginForm"
+              novalidate
+              aria-label="Login form"
+            >
+
+              <!-- Alert area -->
+              <div
+                class="form-alert"
+                id="formAlert"
+                role="alert"
+                aria-live="polite"
+                hidden
+              ></div>
+
+              <!-- Email Field -->
+              <div class="form-group" id="emailGroup">
+                <label class="form-label" for="email">
+                  Email Address
+                  <span class="required" aria-hidden="true">*</span>
+                </label>
+                <div class="form-input-wrap">
+                  <span class="input-icon input-icon--left" aria-hidden="true">
+                    <i class="fas fa-envelope"></i>
+                  </span>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form-input"
+                    placeholder="you@example.com"
+                    autocomplete="email"
+                    required
+                    aria-required="true"
+                    aria-describedby="emailError"
+                  />
+                  <span
+                    class="input-status"
+                    id="emailStatus"
+                    aria-hidden="true"
+                  ></span>
+                </div>
+                <span
+                  class="form-error"
+                  id="emailError"
+                  role="alert"
+                  aria-live="polite"
+                ></span>
+              </div>
+
+              <!-- Password Field -->
+              <div class="form-group" id="passwordGroup">
+                <label class="form-label" for="password">
+                  Password
+                  <span class="required" aria-hidden="true">*</span>
+                </label>
+                <div class="form-input-wrap">
+                  <span class="input-icon input-icon--left" aria-hidden="true">
+                    <i class="fas fa-lock"></i>
+                  </span>
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    class="form-input"
+                    placeholder="Enter your password"
+                    autocomplete="current-password"
+                    required
+                    aria-required="true"
+                    aria-describedby="passwordError"
+                  />
+                  <button
+                    type="button"
+                    class="input-icon input-icon--right toggle-password"
+                    aria-label="Show password"
+                    aria-pressed="false"
+                    data-target="password"
+                  >
+                    <i class="fas fa-eye" aria-hidden="true"></i>
+                  </button>
+                </div>
+                <span
+                  class="form-error"
+                  id="passwordError"
+                  role="alert"
+                  aria-live="polite"
+                ></span>
+              </div>
+
+              <!-- Remember Me + Forgot Password -->
+              <div class="form-options">
+                <label class="checkbox-label">
+                  <input
+                    type="checkbox"
+                    id="rememberMe"
+                    name="rememberMe"
+                    class="checkbox-input"
+                  />
+                  <span class="checkbox-custom" aria-hidden="true"></span>
+                  <span class="checkbox-text">Remember me</span>
+                </label>
+
+                <a href="#" class="forgot-link" id="forgotPasswordLink">
+                  Forgot password?
+                </a>
+              </div>
+
+              <!-- Submit Button -->
+              <button
+                type="submit"
+                class="auth-btn auth-btn--primary"
+                id="loginBtn"
+                aria-describedby="loginBtnDesc"
+              >
+                <span class="btn-text">Sign In</span>
+                <span class="btn-loader" aria-hidden="true">
+                  <i class="fas fa-circle-notch fa-spin"></i>
+                </span>
+                <i class="fas fa-arrow-right btn-arrow" aria-hidden="true"></i>
+              </button>
+
+              <p id="loginBtnDesc" class="sr-only">
+                Click to sign in to your Ebenezer account
+              </p>
+            </form>
+
+            <!-- Footer note -->
+            <p class="form-footer-note">
+              By signing in, you agree to our
+              <a href="#" class="form-footer-note__link">Terms of Service</a>
+              and
+              <a href="#" class="form-footer-note__link">Privacy Policy</a>.
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- ========== FORGOT PASSWORD MODAL ========== -->
+    <div
+      class="modal-overlay"
+      id="forgotModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="forgotModalTitle"
+      hidden
+    >
+      <div class="modal">
+        <button
+          class="modal__close"
+          id="closeForgotModal"
+          aria-label="Close dialog"
+        >
+          <i class="fas fa-times" aria-hidden="true"></i>
+        </button>
+
+        <div class="modal__icon" aria-hidden="true">
+          <i class="fas fa-key"></i>
+        </div>
+
+        <h3 class="modal__title" id="forgotModalTitle">Reset Password</h3>
+        <p class="modal__desc">
+          Enter the email address associated with your account and we'll
+          send you a link to reset your password.
+        </p>
+
+        <form class="modal__form" id="forgotForm" novalidate>
+          <div class="form-group" id="resetEmailGroup">
+            <label class="form-label" for="resetEmail">Email Address</label>
+            <div class="form-input-wrap">
+              <span class="input-icon input-icon--left" aria-hidden="true">
+                <i class="fas fa-envelope"></i>
+              </span>
+              <input
+                type="email"
+                id="resetEmail"
+                name="resetEmail"
+                class="form-input"
+                placeholder="you@example.com"
+                autocomplete="email"
+                required
+                aria-required="true"
+              />
+            </div>
+            <span class="form-error" id="resetEmailError" role="alert"></span>
+          </div>
+
+          <button type="submit" class="auth-btn auth-btn--primary modal__btn">
+            <span class="btn-text">Send Reset Link</span>
+            <span class="btn-loader" aria-hidden="true">
+              <i class="fas fa-circle-notch fa-spin"></i>
+            </span>
+          </button>
+        </form>
+
+        <!-- Success state -->
+        <div class="modal__success" id="forgotSuccess" hidden>
+          <div class="success-icon" aria-hidden="true">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <h4 class="success-title">Email Sent!</h4>
+          <p class="success-desc">
+            Check your inbox for password reset instructions.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== TOAST NOTIFICATION ========== -->
+    <div
+      class="toast"
+      id="toast"
+      role="status"
+      aria-live="polite"
+      aria-atomic="true"
+      hidden
+    >
+      <span class="toast__icon" aria-hidden="true"></span>
+      <span class="toast__message" id="toastMessage"></span>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/auth.js"></script>
+  </body>
+</html>
