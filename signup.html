@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Join Ebenezer — Create your account and become part of our community."
+    />
+    <title>Sign Up | Ebenezer</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- Auth Stylesheet -->
+    <link rel="stylesheet" href="css/auth.css" />
+  </head>
+
+  <body class="auth-body auth-body--signup">
+
+    <!-- ========== BACKGROUND ========== -->
+    <div class="auth-bg" aria-hidden="true">
+      <div class="auth-bg__overlay"></div>
+      <div class="auth-bg__circles">
+        <span class="circle circle--1"></span>
+        <span class="circle circle--2"></span>
+        <span class="circle circle--3"></span>
+        <span class="circle circle--4"></span>
+      </div>
+    </div>
+
+    <!-- ========== NAVIGATION ========== -->
+    <nav class="auth-nav" role="navigation" aria-label="Site navigation">
+      <div class="auth-nav__container">
+        <a href="index.html" class="auth-nav__logo" aria-label="Ebenezer Home">
+          <span class="logo__icon" aria-hidden="true">
+            <i class="fas fa-cross"></i>
+          </span>
+          <span class="logo__text">Ebenezer</span>
+        </a>
+
+        <div class="auth-nav__links">
+          <a href="index.html" class="auth-nav__link">
+            <i class="fas fa-home" aria-hidden="true"></i>
+            Home
+          </a>
+          <a href="login.html" class="auth-nav__link auth-nav__link--cta">
+            Sign In
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ========== MAIN ========== -->
+    <main class="auth-main auth-main--signup" id="main-content">
+      <div class="auth-wrapper auth-wrapper--signup">
+
+        <!-- ---- Left Panel: Branding ---- -->
+        <aside
+          class="auth-panel auth-panel--brand auth-panel--brand-signup"
+          aria-label="Join us information"
+        >
+          <div class="brand-content">
+            <div class="brand-badge">
+              <i class="fas fa-hands-praying" aria-hidden="true"></i>
+            </div>
+
+            <h1 class="brand-title">
+              Join the Ebenezer Family
+            </h1>
+
+            <p class="brand-subtitle">
+              "Hitherto hath the Lord helped us." — 1 Samuel 7:12
+            </p>
+
+            <p class="brand-desc">
+              Become part of a loving, Spirit-filled community. Create your
+              account today and take your first step into a deeper fellowship.
+            </p>
+
+            <!-- Steps -->
+            <div class="brand-steps" aria-label="Sign up steps">
+              <div class="step">
+                <span class="step__num" aria-hidden="true">1</span>
+                <div class="step__info">
+                  <strong>Create your account</strong>
+                  <span>Fill in your details below</span>
+                </div>
+              </div>
+              <div class="step">
+                <span class="step__num" aria-hidden="true">2</span>
+                <div class="step__info">
+                  <strong>Verify your email</strong>
+                  <span>Check your inbox for a confirmation</span>
+                </div>
+              </div>
+              <div class="step">
+                <span class="step__num" aria-hidden="true">3</span>
+                <div class="step__info">
+                  <strong>Join the community</strong>
+                  <span>Connect, grow, and be blessed</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="brand-decor" aria-hidden="true">
+              <i class="fas fa-cross decor-cross decor-cross--1"></i>
+              <i class="fas fa-cross decor-cross decor-cross--2"></i>
+              <i class="fas fa-cross decor-cross decor-cross--3"></i>
+            </div>
+          </div>
+        </aside>
+
+        <!-- ---- Right Panel: Signup Form ---- -->
+        <section
+          class="auth-panel auth-panel--form"
+          aria-labelledby="signup-heading"
+        >
+          <div class="form-container form-container--signup">
+
+            <!-- Form Header -->
+            <div class="form-header">
+              <div class="form-header__icon" aria-hidden="true">
+                <i class="fas fa-user-plus"></i>
+              </div>
+              <h2 class="form-header__title" id="signup-heading">
+                Create Account
+              </h2>
+              <p class="form-header__sub">
+                Already have an account?
+                <a href="login.html" class="form-header__link">Sign in here</a>
+              </p>
+            </div>
+
+            <!-- Progress Steps -->
+            <div
+              class="form-progress"
+              id="formProgress"
+              role="progressbar"
+              aria-valuemin="1"
+              aria-valuemax="3"
+              aria-valuenow="1"
+              aria-label="Form progress: Step 1 of 3"
+            >
+              <div class="progress-step active" data-step="1">
+                <span class="progress-step__num" aria-hidden="true">1</span>
+                <span class="progress-step__label">Personal</span>
+              </div>
+              <div class="progress-connector" aria-hidden="true"></div>
+              <div class="progress-step" data-step="2">
+                <span class="progress-step__num" aria-hidden="true">2</span>
+                <span class="progress-step__label">Account</span>
+              </div>
+              <div class="progress-connector" aria-hidden="true"></div>
+              <div class="progress-step" data-step="3">
+                <span class="progress-step__num" aria-hidden="true">3</span>
+                <span class="progress-step__label">Confirm</span>
+              </div>
+            </div>
+
+            <!-- Social Signup -->
+            <div class="social-auth" aria-label="Sign up with social accounts">
+              <button
+                type="button"
+                class="social-btn social-btn--google"
+                aria-label="Sign up with Google"
+              >
+                <svg
+                  class="social-btn__icon"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                  <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                  <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                  <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                </svg>
+                Continue with Google
+              </button>
+
+              <button
+                type="button"
+                class="social-btn social-btn--facebook"
+                aria-label="Sign up with Facebook"
+              >
+                <i class="fab fa-facebook-f social-btn__icon" aria-hidden="true"></i>
+                Continue with Facebook
+              </button>
+            </div>
+
+            <!-- Divider -->
+            <div class="auth-divider" role="separator" aria-label="or">
+              <span class="auth-divider__line" aria-hidden="true"></span>
+              <span class="auth-divider__text">or create with email</span>
+              <span class="auth-divider__line" aria-hidden="true"></span>
+            </div>
+
+            <!-- SIGNUP FORM — Multi Step -->
+            <form
+              class="auth-form"
+              id="signupForm"
+              novalidate
+              aria-label="Sign up form"
+            >
+
+              <!-- Alert -->
+              <div
+                class="form-alert"
+                id="signupAlert"
+                role="alert"
+                aria-live="polite"
+                hidden
+              ></div>
+
+              <!-- ======= STEP 1: Personal Info ======= -->
+              <fieldset
+                class="form-step form-step--active"
+                id="step1"
+                aria-labelledby="step1Label"
+              >
+                <legend class="sr-only" id="step1Label">
+                  Step 1: Personal Information
+                </legend>
+
+                <!-- Name row -->
+                <div class="form-row">
+                  <!-- First Name -->
+                  <div class="form-group" id="firstNameGroup">
+                    <label class="form-label" for="firstName">
+                      First Name
+                      <span class="required" aria-hidden="true">*</span>
+                    </label>
+                    <div class="form-input-wrap">
+                      <span class="input-icon input-icon--left" aria-hidden="true">
+                        <i class="fas fa-user"></i>
+                      </span>
+                      <input
+                        type="text"
+                        id="firstName"
+                        name="firstName"
+                        class="form-input"
+                        placeholder="John"
+                        autocomplete="given-name"
+                        required
+                        aria-required="true"
+                        aria-describedby="firstNameError"
+                        minlength="2"
+                      />
+                      <span class="input-status" id="firstNameStatus" aria-hidden="true"></span>
+                    </div>
+                    <span class="form-error" id="firstNameError" role="alert"></span>
+                  </div>
+
+                  <!-- Last Name -->
+                  <div class="form-group" id="lastNameGroup">
+                    <label class="form-label" for="lastName">
+                      Last Name
+                      <span class="required" aria-hidden="true">*</span>
+                    </label>
+                    <div class="form-input-wrap">
+                      <span class="input-icon input-icon--left" aria-hidden="true">
+                        <i class="fas fa-user"></i>
+                      </span>
+                      <input
+                        type="text"
+                        id="lastName"
+                        name="lastName"
+                        class="form-input"
+                        placeholder="Doe"
+                        autocomplete="family-name"
+                        required
+                        aria-required="true"
+                        aria-describedby="lastNameError"
+                        minlength="2"
+                      />
+                      <span class="input-status" id="lastNameStatus" aria-hidden="true"></span>
+                    </div>
+                    <span class="form-error" id="lastNameError" role="alert"></span>
+                  </div>
+                </div>
+
+                <!-- Phone -->
+                <div class="form-group" id="phoneGroup">
+                  <label class="form-label" for="phone">
+                    Phone Number
+                  </label>
+                  <div class="form-input-wrap">
+                    <span class="input-icon input-icon--left" aria-hidden="true">
+                      <i class="fas fa-phone"></i>
+                    </span>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      class="form-input"
+                      placeholder="+234 800 000 0000"
+                      autocomplete="tel"
+                      aria-describedby="phoneError"
+                    />
+                  </div>
+                  <span class="form-error" id="phoneError" role="alert"></span>
+                </div>
+
+                <!-- Date of Birth -->
+                <div class="form-group" id="dobGroup">
+                  <label class="form-label" for="dob">
+                    Date of Birth
+                  </label>
+                  <div class="form-input-wrap">
+                    <span class="input-icon input-icon--left" aria-hidden="true">
+                      <i class="fas fa-calendar-alt"></i>
+                    </span>
+                    <input
+                      type="date"
+                      id="dob"
+                      name="dob"
+                      class="form-input form-input--date"
+                      autocomplete="bday"
+                      aria-describedby="dobError"
+                    />
+                  </div>
+                  <span class="form-error" id="dobError" role="alert"></span>
+                </div>
+
+                <!-- Gender -->
+                <div class="form-group" id="genderGroup">
+                  <label class="form-label" for="gender">Gender</label>
+                  <div class="form-input-wrap">
+                    <span class="input-icon input-icon--left" aria-hidden="true">
+                      <i class="fas fa-venus-mars"></i>
+                    </span>
+                    <select
+                      id="gender"
+                      name="gender"
+                      class="form-input form-select"
+                      aria-describedby="genderError"
+                    >
+                      <option value="" disabled selected>Select gender</option>
+                      <option value="male">Male</option>
+                      <option value="female">Female</option>
+                      <option value="prefer-not">Prefer not to say</option>
+                    </select>
+                    <span class="input-icon input-icon--right select-arrow" aria-hidden="true">
+                      <i class="fas fa-chevron-down"></i>
+                    </span>
+                  </div>
+                  <span class="form-error" id="genderError" role="alert"></span>
+                </div>
+
+                <!-- Step 1 Next Button -->
+                <button
+                  type="button"
+                  class="auth-btn auth-btn--primary step-next"
+                  data-next="2"
+                  aria-label="Continue to step 2: Account information"
+                >
+                  <span class="btn-text">Continue</span>
+                  <i class="fas fa-arrow-right btn-arrow" aria-hidden="true"></i>
+                </button>
+              </fieldset>
+
+              <!-- ======= STEP 2: Account Info ======= -->
+              <fieldset
+                class="form-step"
+                id="step2"
+                aria-labelledby="step2Label"
+                hidden
+              >
+                <legend class="sr-only" id="step2Label">
+                  Step 2: Account Information
+                </legend>
+
+                <!-- Email -->
+                <div class="form-group" id="signupEmailGroup">
+                  <label class="form-label" for="signupEmail">
+                    Email Address
+                    <span class="required" aria-hidden="true">*</span>
+                  </label>
+                  <div class="form-input-wrap">
+                    <span class="input-icon input-icon--left" aria-hidden="true">
+                      <i class="fas fa-envelope"></i>
+                    </span>
+                    <input
+                      type="email"
+                      id="signupEmail"
+                      name="signupEmail"
+                      class="form-input"
+                      placeholder="you@example.com"
+                      autocomplete="email"
+                      required
+                      aria-required="true"
+                      aria-describedby="signupEmailError"
+                    />
+                    <span class="input-status" id="signupEmailStatus" aria-hidden="true"></span>
+                  </div>
+                  <span class="form-error" id="signupEmailError" role="alert"></span>
+                </div>
+
+                <!-- Username -->
+                <div class="form-group" id="usernameGroup">
+                  <label class="form-label" for="username">
+                    Username
+                    <span class="required" aria-hidden="true">*</span>
+                  </label>
+                  <div class="form-input-wrap">
+                    <span class="input-icon input-icon--left" aria-hidden="true">
+                      <i class="fas fa-at"></i>
+                    </span>
+                    <input
+                      type="text"
+                      id="username"
+                      name="username"
+                      class="form-input"
+                      placeholder="johndoe123"
+                      autocomplete="username"
+                      required
+                      aria-required="true"
+                      aria-describedby="usernameError usernameHint"
+                      minlength="3"
+                      pattern="[a-zA-Z0-9_]+"
+                    />
+                    <span class="input-status" id="usernameStatus" aria-hidden="true"></span>
+                  </div>
+                  <span class="form-hint" id="usernameHint">
+                    Letters, numbers, and underscores only
+                  </span>
+                  <span class="form-error" id="usernameError" role="alert"></span>
+                </div>
+
+                <!-- Password -->
+                <div class="form-group" id="signupPasswordGroup">
+                  <label class="form-label" for="signupPassword">
+                    Password
+                    <span class="required" aria-hidden="true">*</span>
+                  </label>
+                  <div class="form-input-wrap">
+                    <span class="input-icon input-icon--left" aria-hidden="true">
+                      <i class="fas fa-lock"></i>
+                    </span>
+                    <input
+                      type="password"
+                      id="signupPassword"
+                      name="signupPassword"
+                      class="form-input"
+                      placeholder="Create a strong password"
+                      autocomplete="new-password"
+                      required
+                      aria-required="true"
+                      aria-describedby="signupPasswordError passwordStrengthDesc"
+                      minlength="8"
+                    />
+                    <button
+                      type="button"
+                      class="input-icon input-icon--right toggle-password"
+                      aria-label="Show password"
+                      aria-pressed="false"
+                      data-target="signupPassword"
+                    >
+                      <i class="fas fa-eye" aria-hidden="true"></i>
+                    </button>
+                  </div>
+
+                  <!-- Password Strength Meter -->
+                  <div class="password-strength" id="passwordStrength" aria-hidden="true">
+                    <div class="strength-bars">
+                      <span class="strength-bar" data-index="0"></span>
+                      <span class="strength-bar" data-index="1"></span>
+                      <span class="strength-bar" data-index="2"></span>
+                      <span class="strength-bar" data-index="3"></span>
+                    </div>
+                    <span class="strength-label" id="strengthLabel"></span>
+                  </div>
+                  <p
+                    class="sr-only"
+                    id="passwordStrengthDesc"
+                    aria-live="polite"
+                  ></p>
+
+                  <!-- Password Requirements -->
+                  <ul class="password-reqs" id="passwordReqs" aria-label="Password requirements">
+                    <li class="req" id="req-length" data-req="length">
+                      <i class="fas fa-circle req__icon" aria-hidden="true"></i>
+                      At least 8 characters
+                    </li>
+                    <li class="req" id="req-upper" data-req="upper">
+                      <i class="fas fa-circle req__icon" aria-hidden="true"></i>
+                      One uppercase letter
+                    </li>
+                    <li class="req" id="req-lower" data-req="lower">
+                      <i class="fas fa-circle req__icon" aria-hidden="true"></i>
+                      One lowercase letter
+                    </li>
+                    <li class="req" id="req-number" data-req="number">
+                      <i class="fas fa-circle req__icon" aria-hidden="true"></i>
+                      One number
+                    </li>
+                    <li class="req" id="req-special" data-req="special">
+                      <i class="fas fa-circle req__icon" aria-hidden="true"></i>
+                      One special character
+                    </li>
+                  </ul>
+                  <span class="form-error" id="signupPasswordError" role="alert"></span>
+                </div>
+
+                <!-- Confirm Password -->
+                <div class="form-group" id="confirmPasswordGroup">
+                  <label class="form-label" for="confirmPassword">
+                    Confirm Password
+                    <span class="required" aria-hidden="true">*</span>
+                  </label>
+                  <div class="form-input-wrap">
+                    <span class="input-icon input-icon--left" aria-hidden="true">
+                      <i class="fas fa-lock"></i>
+                    </span>
+                    <input
+                      type="password"
+                      id="confirmPassword"
+                      name="confirmPassword"
+                      class="form-input"
+                      placeholder="Repeat your password"
+                      autocomplete="new-password"
+                      required
+                      aria-required="true"
+                      aria-describedby="confirmPasswordError"
+                    />
+                    <button
+                      type="button"
+                      class="input-icon input-icon--right toggle-password"
+                      aria-label="Show confirm password"
+                      aria-pressed="false"
+                      data-target="confirmPassword"
+                    >
+                      <i class="fas fa-eye" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                  <span class="form-error" id="confirmPasswordError" role="alert"></span>
+                </div>
+
+                <!-- Back + Next -->
+                <div class="step-nav">
+                  <button
+                    type="button"
+                    class="auth-btn auth-btn--secondary step-back"
+                    data-back="1"
+                    aria-label="Go back to step 1"
+                  >
+                    <i class="fas fa-arrow-left btn-arrow" aria-hidden="true"></i>
+                    <span class="btn-text">Back</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="auth-btn auth-btn--primary step-next"
+                    data-next="3"
+                    aria-label="Continue to step 3: Confirm details"
+                  >
+                    <span class="btn-text">Continue</span>
+                    <i class="fas fa-arrow-right btn-arrow" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </fieldset>
+
+              <!-- ======= STEP 3: Confirm ======= -->
+              <fieldset
+                class="form-step"
+                id="step3"
+                aria-labelledby="step3Label"
+                hidden
+              >
+                <legend class="sr-only" id="step3Label">
+                  Step 3: Confirm and Complete
+                </legend>
+
+                <!-- Church / Ministry -->
+                <div class="form-group" id="churchGroup">
+                  <label class="form-label" for="church">
+                    Home Church / Fellowship
+                  </label>
+                  <div class="form-input-wrap">
+                    <span class="input-icon input-icon--left" aria-hidden="true">
+                      <i class="fas fa-church"></i>
+                    </span>
+                    <input
+                      type="text"
+                      id="church"
+                      name="church"
+                      class="form-input"
+                      placeholder="e.g. Ebenezer Chapel, Lagos"
+                      autocomplete="organization"
+                    />
+                  </div>
+                </div>
+
+                <!-- How did you hear about us -->
+                <div class="form-group" id="referralGroup">
+                  <label class="form-label" for="referral">
+                    How did you hear about us?
+                  </label>
+                  <div class="form-input-wrap">
+                    <span class="input-icon input-icon--left" aria-hidden="true">
+                      <i class="fas fa-bullhorn"></i>
+                    </span>
+                    <select
+                      id="referral"
+                      name="referral"
+                      class="form-input form-select"
+                    >
+                      <option value="" disabled selected>Select an option</option>
+                      <option value="social-media">Social Media</option>
+                      <option value="friend">Friend / Family</option>
+                      <option value="church">Church announcement</option>
+                      <option value="google">Google Search</option>
+                      <option value="flyer">Flyer / Poster</option>
+                      <option value="other">Other</option>
+                    </select>
+                    <span class="input-icon input-icon--right select-arrow" aria-hidden="true">
+                      <i class="fas fa-chevron-down"></i>
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Terms & Conditions -->
+                <div class="form-group">
+                  <label class="checkbox-label" id="termsGroup">
+                    <input
+                      type="checkbox"
+                      id="terms"
+                      name="terms"
+                      class="checkbox-input"
+                      required
+                      aria-required="true"
+                      aria-describedby="termsError"
+                    />
+                    <span class="checkbox-custom" aria-hidden="true"></span>
+                    <span class="checkbox-text">
+                      I agree to the
+                      <a href="#" class="form-header__link">Terms of Service</a>
+                      and
+                      <a href="#" class="form-header__link">Privacy Policy</a>
+                    </span>
+                  </label>
+                  <span class="form-error" id="termsError" role="alert"></span>
+                </div>
+
+                <!-- Newsletter opt-in -->
+                <div class="form-group">
+                  <label class="checkbox-label">
+                    <input
+                      type="checkbox"
+                      id="newsletter"
+                      name="newsletter"
+                      class="checkbox-input"
+                    />
+                    <span class="checkbox-custom" aria-hidden="true"></span>
+                    <span class="checkbox-text">
+                      Send me newsletters, devotionals, and event updates
+                    </span>
+                  </label>
+                </div>
+
+                <!-- Back + Submit -->
+                <div class="step-nav">
+                  <button
+                    type="button"
+                    class="auth-btn auth-btn--secondary step-back"
+                    data-back="2"
+                    aria-label="Go back to step 2"
+                  >
+                    <i class="fas fa-arrow-left btn-arrow" aria-hidden="true"></i>
+                    <span class="btn-text">Back</span>
+                  </button>
+                  <button
+                    type="submit"
+                    class="auth-btn auth-btn--primary"
+                    id="signupBtn"
+                  >
+                    <span class="btn-text">Create Account</span>
+                    <span class="btn-loader" aria-hidden="true">
+                      <i class="fas fa-circle-notch fa-spin"></i>
+                    </span>
+                    <i class="fas fa-check btn-arrow" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- ========== SUCCESS MODAL ========== -->
+    <div
+      class="modal-overlay"
+      id="successModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="successModalTitle"
+      hidden
+    >
+      <div class="modal modal--success">
+        <div class="modal__confetti" aria-hidden="true" id="confettiContainer"></div>
+
+        <div class="success-animation" aria-hidden="true">
+          <div class="success-circle">
+            <i class="fas fa-check"></i>
+          </div>
+        </div>
+
+        <h3 class="modal__title" id="successModalTitle">
+          Welcome to Ebenezer! 🎉
+        </h3>
+        <p class="modal__desc" id="successModalDesc">
+          Your account has been created successfully. Check your email to
+          verify your account and get started.
+        </p>
+
+        <div class="modal__actions">
+          <a href="login.html" class="auth-btn auth-btn--primary modal__btn">
+            <i class="fas fa-sign-in-alt" aria-hidden="true"></i>
+            Sign In Now
+          </a>
+          <a href="index.html" class="auth-btn auth-btn--secondary modal__btn">
+            <i class="fas fa-home" aria-hidden="true"></i>
+            Go to Home
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== TOAST ========== -->
+    <div
+      class="toast"
+      id="toast"
+      role="status"
+      aria-live="polite"
+      aria-atomic="true"
+      hidden
+    >
+      <span class="toast__icon" aria-hidden="true"></span>
+      <span class="toast__message" id="toastMessage"></span>
+    </div>
+
+    <script src="js/auth.js"></script>
+  </body>
+</html>
